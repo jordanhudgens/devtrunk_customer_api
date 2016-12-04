@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
   end
 
 	def create
-    @customer = FreelanceDocument.new(customer_params)
+    @customer = Customer.new(customer_params)
 
     if @customer.save
       render json: @customer, status: :created, location: @customer
